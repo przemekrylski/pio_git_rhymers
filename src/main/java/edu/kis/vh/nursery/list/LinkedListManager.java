@@ -1,6 +1,6 @@
 package edu.kis.vh.nursery.list;
 
-public class IntLinkedList {
+public class LinkedListManager {
 
 	Node last;
 	int i;

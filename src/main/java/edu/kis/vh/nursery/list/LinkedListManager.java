@@ -15,22 +15,22 @@ public class LinkedListManager {
 		}
 	}
 
-	public boolean isEmpty() {
+	public boolean checkIfEmpty() {
 		return last == null;
 	}
 
-	public boolean isFull() {
+	public boolean checkIfFull() {
 		return false;
 	}
 
-	public int top() {
-		if (isEmpty())
+	public int checkTopValue() {
+		if (checkIfEmpty())
 			return -1;
 		return last.value;
 	}
 
-	public int pop() {
-		if (isEmpty())
+	public int popValue() {
+		if (checkIfEmpty())
 			return -1;
 		int ret = last.value;
 		last = last.prev;

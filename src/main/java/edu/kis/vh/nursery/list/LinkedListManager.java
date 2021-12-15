@@ -5,7 +5,7 @@ public class LinkedListManager {
     Node last;
     int i;
 
-    public void push(int i) {
+    public void pushElement(int i) {
         if (last == null)
             last = new Node(i);
         else {
@@ -15,22 +15,22 @@ public class LinkedListManager {
         }
     }
 
-    public boolean isEmpty() {
+    public boolean checkIfListIsEmpty() {
         return last == null;
     }
 
-    public boolean isFull() {
+    public boolean checkIfListIsFull() {
         return false;
     }
 
-    public int top() {
-        if (isEmpty())
+    public int checkTopValue() {
+        if (checkIfListIsEmpty())
             return -1;
         return last.value;
     }
 
-    public int pop() {
-        if (isEmpty())
+    public int popValue() {
+        if (checkIfListIsEmpty())
             return -1;
         int ret = last.value;
         last = last.prev;

@@ -2,6 +2,7 @@ package edu.kis.vh.nursery.list;
 
 public class LinkedListManager {
 
+    public static final int IS_EMPTY = -1;
     Node lastValue;
     int i;
 
@@ -25,13 +26,13 @@ public class LinkedListManager {
 
     public int checkTopValue() {
         if (checkIfListIsEmpty())
-            return -1;
+            return IS_EMPTY;
         return lastValue.value;
     }
 
     public int popValue() {
         if (checkIfListIsEmpty())
-            return -1;
+            return IS_EMPTY;
         int result = lastValue.value;
         lastValue = lastValue.previousValue;
         return result;

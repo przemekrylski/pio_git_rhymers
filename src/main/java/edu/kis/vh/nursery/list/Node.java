@@ -6,6 +6,7 @@ public class Node {
 	private Node previousValue;
 	private Node nextValue;
 
+	// NO USELESS SETTERS
 	public Node(int i) {
 		setValue(i);
 	}

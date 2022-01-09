@@ -2,17 +2,17 @@ package edu.kis.vh.nursery.list;
 
 public class LinkedListManager {
 
-    public static final int IS_EMPTY = -1;
-    Node lastValue;
+    private static final int IS_EMPTY = -1;
+    private Node lastValue;
     int i;
 
     public void pushElement(int i) {
         if (lastValue == null)
             lastValue = new Node(i);
         else {
-            lastValue.nextValue = new Node(i);
-            lastValue.nextValue.previousValue = lastValue;
-            lastValue = lastValue.nextValue;
+            lastValue.setNextValue(new Node(i));
+            lastValue.getNextValue().setPreviousValue(lastValue);
+            lastValue = lastValue.getNextValue();
         }
     }
 
@@ -27,14 +27,14 @@ public class LinkedListManager {
     public int checkTopValue() {
         if (checkIfListIsEmpty())
             return IS_EMPTY;
-        return lastValue.value;
+        return lastValue.getValue();
     }
 
     public int popValue() {
         if (checkIfListIsEmpty())
             return IS_EMPTY;
-        int result = lastValue.value;
-        lastValue = lastValue.previousValue;
+        int result = lastValue.getValue();
+        lastValue = lastValue.getPreviousValue();
         return result;
     }
 

@@ -8,6 +8,10 @@ public class DefaultCountingOutRhymer {
 	// test
 	private final int[] arrayOfNumbers = new int[MAX_SIZE];
 
+	public int getTotalValue() {
+		return totalValue;
+	}
+
 	private int totalValue = -1;
 
 	public void countIn(int in) {

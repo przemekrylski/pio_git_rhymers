@@ -2,8 +2,8 @@ package edu.kis.vh.nursery.list;
 
 public class LinkedListManager {
 
-    public static final int IS_EMPTY = -1;
-    Node lastValue;
+    private static final int IS_EMPTY = -1;
+    private Node lastValue;
     int i;
 
     public void pushElement(int i) {
